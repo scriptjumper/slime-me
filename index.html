@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slime Me</title>
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="mcir">
+        <div class="centre"></div>
+        <div class="ocir"></div>
+        <div class="ocir2"></div>
+      </div>
+    </div>
+
+    <script>
+      mcir = document.getElementsByClassName("mcir");
+      ocir = document.getElementsByClassName("ocir");
+      ocir2 = document.getElementsByClassName("ocir2");
+      cen = document.getElementsByClassName("centre");
+
+      i = 0;
+      rs = 0.6;
+
+      os = 0;
+
+      rotate();
+      function rotate() {
+        requestAnimationFrame(rotate);
+        mcir[0].style.transform = "rotate(" + i + "deg)";
+        ocir[0].style.left = Math.tan(i / 150) * 40 + "px";
+        ocir2[0].style.left = 100 + Math.tan(i / 50) * 40 + "px";
+        cen[0].style.transform = "rotate(" + -i * 4 + "deg)";
+        i += rs;
+      }
+
+      onclick = function t() {
+        rs += 1;
+      };
+    </script>
+  </body>
+</html>

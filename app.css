@@ -1,0 +1,42 @@
+body {
+  background-color: black;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  filter: blur(20px) contrast(50);
+  display: flex;
+  justify-content: center;
+  top: 20%;
+}
+
+.mcir,
+.ocir,
+.ocir2,
+.centre {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 35%;
+  top: inherit;
+  background-color: lime;
+}
+
+.ocir,
+.ocir2 {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: lime;
+}
+
+.centre {
+  background-image: linear-gradient(to bottom, black, lime, snow 100%);
+  width: 160px;
+  height: 160px;
+  top: 0px;
+  border-radius: 40%;
+}
